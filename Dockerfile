@@ -1,5 +1,6 @@
 # this Dockerfile starts the python interpreter
-
-FROM python:3.8-slim-buster
+# Trying out arg
+ARG PYTHON_VERSION=3.8-slim-buster
+FROM python:${PYTHON_VERSION}
 
 CMD ["python3"]
