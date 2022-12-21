@@ -1,0 +1,3 @@
+Cython
+nemo_toolkit[all]
+seaborn

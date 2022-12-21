@@ -1,0 +1,888 @@
+Sending build context to Docker daemon  94.72kB
+Error response from daemon: dial unix docker.raw.sock: connect: no such file or directory
+admin@Admins-MacBook-Pro python-docker-practice % docker build -t python-docker-practice .
+[+] Building 403.3s (7/7) FINISHED                                                                                                                                                           
+ => [internal] load build definition from Dockerfile                                                                                                                                    0.0s
+ => => transferring dockerfile: 267B                                                                                                                                                    0.0s
+ => [internal] load .dockerignore                                                                                                                                                       0.0s
+ => => transferring context: 2B                                                                                                                                                         0.0s
+ => [internal] load metadata for docker.io/library/python:3.8-slim-buster                                                                                                               1.4s
+ => [internal] load build context                                                                                                                                                       0.0s
+ => => transferring context: 75B                                                                                                                                                        0.0s
+ => CACHED [1/3] FROM docker.io/library/python:3.8-slim-buster@sha256:d5545f63d4a2d9ccd946b5675df5633f9a3c43bb12cfcc3e7baefa559d8702cd                                                  0.0s
+ => [2/3] COPY requirements.txt requirements.txt                                                                                                                                        0.0s
+ => ERROR [3/3] RUN pip install -r requirements.txt                                                                                                                                   401.7s
+------                                                                                                                                                                                       
+ > [3/3] RUN pip install -r requirements.txt:                                                                                                                                                
+#7 3.106 Collecting Cython                                                                                                                                                                   
+#7 3.219   Downloading Cython-0.29.32-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl (1.9 MB)                                                                
+#7 3.682      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 4.2 MB/s eta 0:00:00                                                                                                       
+#7 3.809 Collecting nemo_toolkit[all]                                                                                                                                                        
+#7 3.836   Downloading nemo_toolkit-1.13.0-py3-none-any.whl (3.9 MB)
+#7 4.345      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.9/3.9 MB 7.3 MB/s eta 0:00:00
+#7 4.467 Collecting seaborn
+#7 4.498   Downloading seaborn-0.12.1-py3-none-any.whl (288 kB)
+#7 4.531      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 288.2/288.2 KB 9.8 MB/s eta 0:00:00
+#7 5.011 Collecting wget
+#7 5.029   Downloading wget-3.2.zip (10 kB)
+#7 5.035   Preparing metadata (setup.py): started
+#7 5.471   Preparing metadata (setup.py): finished with status 'done'
+#7 5.585 Collecting onnx>=1.7.0
+#7 5.616   Downloading onnx-1.13.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.5 MB)
+#7 7.346      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.5/13.5 MB 7.5 MB/s eta 0:00:00
+#7 7.668 Collecting wrapt
+#7 7.690   Downloading wrapt-1.14.1-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (81 kB)
+#7 7.705      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 81.0/81.0 KB 6.3 MB/s eta 0:00:00
+#7 7.930 Collecting scikit-learn
+#7 7.973   Downloading scikit_learn-1.2.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (9.7 MB)
+#7 9.407      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 6.8 MB/s eta 0:00:00
+#7 9.480 Collecting text-unidecode
+#7 9.507   Downloading text_unidecode-1.3-py2.py3-none-any.whl (78 kB)
+#7 9.526      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.2/78.2 KB 4.3 MB/s eta 0:00:00
+#7 9.597 Collecting huggingface-hub
+#7 9.634   Downloading huggingface_hub-0.11.1-py3-none-any.whl (182 kB)
+#7 9.662      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 182.4/182.4 KB 9.4 MB/s eta 0:00:00
+#7 10.18 Collecting numpy>=1.21
+#7 10.28   Downloading numpy-1.24.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.3 MB)
+#7 12.79      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17.3/17.3 MB 6.2 MB/s eta 0:00:00
+#7 13.36 Collecting ruamel.yaml
+#7 13.38   Downloading ruamel.yaml-0.17.21-py3-none-any.whl (109 kB)
+#7 13.41      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.5/109.5 KB 5.6 MB/s eta 0:00:00
+#7 13.82 Collecting setuptools==59.5.0
+#7 13.84   Downloading setuptools-59.5.0-py3-none-any.whl (952 kB)
+#7 13.95      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 952.4/952.4 KB 8.8 MB/s eta 0:00:00
+#7 14.09 Collecting tqdm>=4.41.0
+#7 14.11   Downloading tqdm-4.64.1-py2.py3-none-any.whl (78 kB)
+#7 14.12      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 KB 6.3 MB/s eta 0:00:00
+#7 14.43 Collecting numba
+#7 14.48   Downloading numba-0.56.4-cp38-cp38-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.5 MB)
+#7 14.93      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.5/3.5 MB 7.9 MB/s eta 0:00:00
+#7 15.07 Collecting torch
+#7 15.09   Downloading torch-1.13.1-cp38-cp38-manylinux1_x86_64.whl (887.4 MB)
+#7 143.2      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 887.4/887.4 MB 1.3 MB/s eta 0:00:00
+#7 146.4 Collecting python-dateutil
+#7 146.4   Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+#7 146.4      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.7/247.7 KB 5.4 MB/s eta 0:00:00
+#7 146.5 Collecting click==8.0.2
+#7 146.6   Downloading click-8.0.2-py3-none-any.whl (97 kB)
+#7 146.6      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.6/97.6 KB 8.0 MB/s eta 0:00:00
+#7 146.7 Collecting packaging
+#7 146.7   Downloading packaging-22.0-py3-none-any.whl (42 kB)
+#7 146.7      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.6/42.6 KB 6.5 MB/s eta 0:00:00
+#7 146.8 Collecting inflect
+#7 146.8   Downloading inflect-6.0.2-py3-none-any.whl (34 kB)
+#7 146.8 Collecting ftfy
+#7 146.9   Downloading ftfy-6.1.1-py3-none-any.whl (53 kB)
+#7 146.9      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.1/53.1 KB 5.3 MB/s eta 0:00:00
+#7 147.0 Collecting nltk
+#7 147.0   Downloading nltk-3.8-py3-none-any.whl (1.5 MB)
+#7 147.2      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 7.4 MB/s eta 0:00:00
+#7 147.4 Collecting pytest
+#7 147.5   Downloading pytest-7.2.0-py3-none-any.whl (316 kB)
+#7 147.5      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 316.8/316.8 KB 6.9 MB/s eta 0:00:00
+#7 148.5 Collecting boto3
+#7 148.5   Downloading boto3-1.26.34-py3-none-any.whl (132 kB)
+#7 148.5      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.7/132.7 KB 7.4 MB/s eta 0:00:00
+#7 149.5 Collecting regex
+#7 149.5   Downloading regex-2022.10.31-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (772 kB)
+#7 149.7      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 772.3/772.3 KB 6.6 MB/s eta 0:00:00
+#7 149.7 Collecting parameterized
+#7 149.8   Downloading parameterized-0.8.1-py2.py3-none-any.whl (26 kB)
+#7 149.9 Collecting braceexpand
+#7 149.9   Downloading braceexpand-0.1.7-py2.py3-none-any.whl (5.9 kB)
+#7 150.0 Collecting torchmetrics<=0.10.3,>=0.4.1rc0
+#7 150.1   Downloading torchmetrics-0.10.3-py3-none-any.whl (529 kB)
+#7 150.2      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 529.7/529.7 KB 5.7 MB/s eta 0:00:00
+#7 150.3 Collecting black==19.10b0
+#7 150.3   Downloading black-19.10b0-py36-none-any.whl (97 kB)
+#7 150.3      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.5/97.5 KB 7.2 MB/s eta 0:00:00
+#7 150.5 Collecting sentencepiece<1.0.0
+#7 150.5   Downloading sentencepiece-0.1.97-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.3 MB)
+#7 150.7      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 6.3 MB/s eta 0:00:00
+#7 150.9 Collecting sox
+#7 150.9   Downloading sox-1.4.1-py2.py3-none-any.whl (39 kB)
+#7 151.1 Collecting hydra-core<1.2,>=1.1.0
+#7 151.1   Downloading hydra_core-1.1.2-py3-none-any.whl (147 kB)
+#7 151.2      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 147.4/147.4 KB 7.0 MB/s eta 0:00:00
+#7 151.2 Collecting einops
+#7 151.3   Downloading einops-0.6.0-py3-none-any.whl (41 kB)
+#7 151.3      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.6/41.6 KB 7.2 MB/s eta 0:00:00
+#7 151.4 Collecting sacremoses>=0.0.43
+#7 151.4   Downloading sacremoses-0.0.53.tar.gz (880 kB)
+#7 151.6      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 880.6/880.6 KB 6.4 MB/s eta 0:00:00
+#7 151.6   Preparing metadata (setup.py): started
+#7 151.8   Preparing metadata (setup.py): finished with status 'done'
+#7 152.0 Collecting ijson
+#7 152.1   Downloading ijson-3.1.4-cp38-cp38-manylinux2010_x86_64.whl (133 kB)
+#7 152.1      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.2/133.2 KB 7.2 MB/s eta 0:00:00
+#7 152.3 Collecting pytorch-lightning<=1.7.7,>=1.7.0
+#7 152.3   Downloading pytorch_lightning-1.7.7-py3-none-any.whl (708 kB)
+#7 152.4      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 708.1/708.1 KB 6.3 MB/s eta 0:00:00
+#7 152.7 Collecting scipy>=0.14
+#7 152.8   Downloading scipy-1.9.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (33.8 MB)
+#7 158.4      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 33.8/33.8 MB 6.6 MB/s eta 0:00:00
+#7 158.6 Collecting flask-restful
+#7 158.7   Downloading Flask_RESTful-0.3.9-py2.py3-none-any.whl (25 kB)
+#7 158.7 Collecting attrdict
+#7 158.7   Downloading attrdict-2.0.1-py2.py3-none-any.whl (9.9 kB)
+#7 159.3 Collecting pillow
+#7 159.3   Downloading Pillow-9.3.0-cp38-cp38-manylinux_2_28_x86_64.whl (3.3 MB)
+#7 159.8      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 6.8 MB/s eta 0:00:00
+#7 159.9 Collecting h5py
+#7 159.9   Downloading h5py-3.7.0-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (4.5 MB)
+#7 160.7      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 6.1 MB/s eta 0:00:00
+#7 161.0 Collecting matplotlib>=3.3.2
+#7 161.0   Downloading matplotlib-3.6.2-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (9.4 MB)
+#7 162.9      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.4/9.4 MB 5.2 MB/s eta 0:00:00
+#7 163.0 Collecting webdataset<=0.1.62,>=0.1.48
+#7 163.0   Downloading webdataset-0.1.62-py3-none-any.whl (32 kB)
+#7 163.1 Collecting sentence-transformers
+#7 163.2   Downloading sentence-transformers-2.2.2.tar.gz (85 kB)
+#7 163.2      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 86.0/86.0 KB 4.5 MB/s eta 0:00:00
+#7 163.3   Preparing metadata (setup.py): started
+#7 163.5   Preparing metadata (setup.py): finished with status 'done'
+#7 163.5 Collecting texterrors
+#7 163.6   Downloading texterrors-0.4.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.1 MB)
+#7 163.8      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 6.0 MB/s eta 0:00:00
+#7 163.9 Collecting kaldi-python-io
+#7 163.9   Downloading kaldi-python-io-1.2.2.tar.gz (8.8 kB)
+#7 163.9   Preparing metadata (setup.py): started
+#7 164.1   Preparing metadata (setup.py): finished with status 'done'
+#7 164.5 Collecting pandas
+#7 164.5   Downloading pandas-1.5.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.2 MB)
+#7 166.1      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.2/12.2 MB 7.7 MB/s eta 0:00:00
+#7 166.3 Collecting progress>=1.5
+#7 166.3   Downloading progress-1.6.tar.gz (7.8 kB)
+#7 166.4   Preparing metadata (setup.py): started
+#7 166.8   Preparing metadata (setup.py): finished with status 'done'
+#7 166.9 Collecting pyannote.metrics
+#7 166.9   Downloading pyannote.metrics-3.2.1-py3-none-any.whl (51 kB)
+#7 166.9      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 51.4/51.4 KB 5.5 MB/s eta 0:00:00
+#7 167.0 Collecting jiwer>=2.0.0
+#7 167.0   Downloading jiwer-2.5.1-py3-none-any.whl (15 kB)
+#7 167.2 Collecting sphinx
+#7 167.2   Downloading sphinx-5.3.0-py3-none-any.whl (3.2 MB)
+#7 167.8      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 5.6 MB/s eta 0:00:00
+#7 168.0 Collecting transformers<=4.21.2,>=4.0.1
+#7 168.0   Downloading transformers-4.21.2-py3-none-any.whl (4.7 MB)
+#7 168.9      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 5.5 MB/s eta 0:00:00
+#7 169.0 Collecting gdown
+#7 169.0   Downloading gdown-4.6.0-py3-none-any.whl (14 kB)
+#7 169.1 Collecting tabulate>=0.8.7
+#7 169.1   Downloading tabulate-0.9.0-py3-none-any.whl (35 kB)
+#7 169.2 Collecting textdistance>=4.1.5
+#7 169.2   Downloading textdistance-4.5.0-py3-none-any.whl (31 kB)
+#7 169.4 Collecting omegaconf<2.2,>=2.1.2
+#7 169.4   Downloading omegaconf-2.1.2-py3-none-any.whl (74 kB)
+#7 169.5      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 74.7/74.7 KB 4.6 MB/s eta 0:00:00
+#7 169.6 Collecting sacrebleu[ja]
+#7 169.6   Downloading sacrebleu-2.3.1-py3-none-any.whl (118 kB)
+#7 169.6      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.9/118.9 KB 4.7 MB/s eta 0:00:00
+#7 169.8 Collecting pyannote.core
+#7 169.8   Downloading pyannote.core-5.0.0-py3-none-any.whl (58 kB)
+#7 169.8      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.5/58.5 KB 6.5 MB/s eta 0:00:00
+#7 169.9 Collecting librosa>=0.9.0
+#7 169.9   Downloading librosa-0.9.2-py3-none-any.whl (214 kB)
+#7 170.0      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 214.3/214.3 KB 6.3 MB/s eta 0:00:00
+#7 170.0 Collecting pangu
+#7 170.1   Downloading pangu-4.0.6.1-py3-none-any.whl (6.4 kB)
+#7 170.1 Collecting pesq
+#7 170.2   Downloading pesq-0.0.4.tar.gz (38 kB)
+#7 170.2   Preparing metadata (setup.py): started
+#7 174.4   Preparing metadata (setup.py): finished with status 'done'
+#7 174.6 Collecting faiss-cpu
+#7 174.6   Downloading faiss_cpu-1.7.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.0 MB)
+#7 177.1      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17.0/17.0 MB 6.3 MB/s eta 0:00:00
+#7 178.6 Collecting rapidfuzz
+#7 178.6   Downloading rapidfuzz-2.13.7-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.2 MB)
+#7 178.9      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 7.8 MB/s eta 0:00:00
+#7 179.0 Collecting jieba
+#7 179.0   Downloading jieba-0.42.1.tar.gz (19.2 MB)
+#7 181.9      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 19.2/19.2 MB 6.8 MB/s eta 0:00:00
+#7 182.4   Preparing metadata (setup.py): started
+#7 182.6   Preparing metadata (setup.py): finished with status 'done'
+#7 182.7 Collecting ipywidgets
+#7 182.8   Downloading ipywidgets-8.0.3-py3-none-any.whl (137 kB)
+#7 182.8      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 137.9/137.9 KB 6.4 MB/s eta 0:00:00
+#7 182.8 Collecting pytest-runner
+#7 182.8   Using cached pytest_runner-6.0.0-py3-none-any.whl (7.2 kB)
+#7 183.0 Collecting youtokentome>=1.0.5
+#7 183.1   Downloading youtokentome-1.0.6-cp38-cp38-manylinux2010_x86_64.whl (1.7 MB)
+#7 183.3      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 6.0 MB/s eta 0:00:00
+#7 183.5 Collecting pyyaml<6
+#7 183.5   Downloading PyYAML-5.4.1-cp38-cp38-manylinux1_x86_64.whl (662 kB)
+#7 183.6      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 662.4/662.4 KB 6.2 MB/s eta 0:00:00
+#7 183.7 Collecting kaldiio
+#7 183.7   Downloading kaldiio-2.17.2.tar.gz (24 kB)
+#7 183.7   Preparing metadata (setup.py): started
+#7 184.6   Preparing metadata (setup.py): finished with status 'done'
+#7 184.8 Collecting opencc
+#7 184.8   Downloading OpenCC-1.1.6-cp38-cp38-manylinux1_x86_64.whl (778 kB)
+#7 184.9      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 778.2/778.2 KB 5.6 MB/s eta 0:00:00
+#7 185.0 Collecting sphinxcontrib-bibtex
+#7 185.0   Downloading sphinxcontrib_bibtex-2.5.0-py3-none-any.whl (39 kB)
+#7 185.2 Collecting pydub
+#7 185.2   Downloading pydub-0.25.1-py2.py3-none-any.whl (32 kB)
+#7 185.3 Collecting isort[requirements]<5
+#7 185.3   Downloading isort-4.3.21-py2.py3-none-any.whl (42 kB)
+#7 185.4      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.3/42.3 KB 3.2 MB/s eta 0:00:00
+#7 185.5 Collecting soundfile
+#7 185.5   Downloading soundfile-0.11.0-py2.py3-none-any.whl (23 kB)
+#7 185.6 Collecting pystoi
+#7 185.6   Downloading pystoi-0.3.3.tar.gz (7.0 kB)
+#7 185.6   Preparing metadata (setup.py): started
+#7 185.8   Preparing metadata (setup.py): finished with status 'done'
+#7 185.9 Collecting g2p-en
+#7 185.9   Downloading g2p_en-2.1.0-py3-none-any.whl (3.1 MB)
+#7 186.6      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 4.8 MB/s eta 0:00:00
+#7 186.8 Collecting pypinyin
+#7 186.8   Downloading pypinyin-0.47.1-py2.py3-none-any.whl (1.4 MB)
+#7 187.0      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 5.9 MB/s eta 0:00:00
+#7 187.1 Collecting fasttext
+#7 187.2   Downloading fasttext-0.9.2.tar.gz (68 kB)
+#7 187.2      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 68.8/68.8 KB 4.6 MB/s eta 0:00:00
+#7 187.2   Preparing metadata (setup.py): started
+#7 188.5   Preparing metadata (setup.py): finished with status 'done'
+#7 188.6 Collecting marshmallow
+#7 188.6   Downloading marshmallow-3.19.0-py3-none-any.whl (49 kB)
+#7 188.7      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.1/49.1 KB 3.1 MB/s eta 0:00:00
+#7 188.8 Collecting torchvision
+#7 188.8   Downloading torchvision-0.14.1-cp38-cp38-manylinux1_x86_64.whl (24.2 MB)
+#7 193.0      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.2/24.2 MB 5.8 MB/s eta 0:00:00
+#7 193.2 Collecting editdistance
+#7 193.3   Downloading editdistance-0.6.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (283 kB)
+#7 193.4      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 283.4/283.4 KB 3.7 MB/s eta 0:00:00
+#7 193.6 Collecting wandb
+#7 193.7   Downloading wandb-0.13.7-py2.py3-none-any.whl (1.9 MB)
+#7 194.0      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 5.7 MB/s eta 0:00:00
+#7 194.2 Collecting toml>=0.9.4
+#7 194.2   Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+#7 194.3 Collecting attrs>=18.1.0
+#7 194.3   Downloading attrs-22.1.0-py2.py3-none-any.whl (58 kB)
+#7 194.3      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.8/58.8 KB 11.5 MB/s eta 0:00:00
+#7 194.4 Collecting pathspec<1,>=0.6
+#7 194.4   Downloading pathspec-0.10.3-py3-none-any.whl (29 kB)
+#7 194.5 Collecting typed-ast>=1.4.0
+#7 194.6   Downloading typed_ast-1.5.4-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (897 kB)
+#7 194.7      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 897.2/897.2 KB 5.5 MB/s eta 0:00:00
+#7 194.8 Collecting appdirs
+#7 194.8   Downloading appdirs-1.4.4-py2.py3-none-any.whl (9.6 kB)
+#7 195.1 Collecting importlib-resources<5.3
+#7 195.1   Downloading importlib_resources-5.2.3-py3-none-any.whl (27 kB)
+#7 195.1 Collecting antlr4-python3-runtime==4.8
+#7 195.2   Downloading antlr4-python3-runtime-4.8.tar.gz (112 kB)
+#7 195.2      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.4/112.4 KB 6.2 MB/s eta 0:00:00
+#7 195.2   Preparing metadata (setup.py): started
+#7 195.4   Preparing metadata (setup.py): finished with status 'done'
+#7 195.6 Collecting pipreqs
+#7 195.6   Downloading pipreqs-0.4.11-py2.py3-none-any.whl (32 kB)
+#7 195.8 Collecting pip-api
+#7 195.8   Downloading pip_api-0.0.30-py3-none-any.whl (111 kB)
+#7 195.8      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 111.6/111.6 KB 3.1 MB/s eta 0:00:00
+#7 196.2 Collecting levenshtein==0.20.2
+#7 196.3   Downloading Levenshtein-0.20.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.4 MB)
+#7 196.5      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 7.4 MB/s eta 0:00:00
+#7 196.7 Collecting pooch>=1.0
+#7 196.7   Downloading pooch-1.6.0-py3-none-any.whl (56 kB)
+#7 196.7      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.3/56.3 KB 5.4 MB/s eta 0:00:00
+#7 196.8 Collecting joblib>=0.14
+#7 196.8   Downloading joblib-1.2.0-py3-none-any.whl (297 kB)
+#7 196.9      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 298.0/298.0 KB 6.5 MB/s eta 0:00:00
+#7 197.0 Collecting audioread>=2.1.9
+#7 197.0   Downloading audioread-3.0.0.tar.gz (377 kB)
+#7 197.1      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 377.0/377.0 KB 8.8 MB/s eta 0:00:00
+#7 197.1   Preparing metadata (setup.py): started
+#7 197.3   Preparing metadata (setup.py): finished with status 'done'
+#7 197.4 Collecting resampy>=0.2.2
+#7 197.5   Downloading resampy-0.4.2-py3-none-any.whl (3.1 MB)
+#7 198.0      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 6.3 MB/s eta 0:00:00
+#7 198.0 Collecting decorator>=4.0.10
+#7 198.0   Downloading decorator-5.1.1-py3-none-any.whl (9.1 kB)
+#7 198.3 Collecting contourpy>=1.0.1
+#7 198.3   Downloading contourpy-1.0.6-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (295 kB)
+#7 198.4      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 296.0/296.0 KB 4.8 MB/s eta 0:00:00
+#7 198.5 Collecting pyparsing>=2.2.1
+#7 198.5   Downloading pyparsing-3.0.9-py3-none-any.whl (98 kB)
+#7 198.5      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.3/98.3 KB 5.3 MB/s eta 0:00:00
+#7 198.6 Collecting cycler>=0.10
+#7 198.6   Downloading cycler-0.11.0-py3-none-any.whl (6.4 kB)
+#7 198.7 Collecting kiwisolver>=1.0.1
+#7 198.8   Downloading kiwisolver-1.4.4-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl (1.2 MB)
+#7 199.0      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 4.9 MB/s eta 0:00:00
+#7 199.2 Collecting fonttools>=4.22.0
+#7 199.2   Downloading fonttools-4.38.0-py3-none-any.whl (965 kB)
+#7 199.4      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 965.4/965.4 KB 6.2 MB/s eta 0:00:00
+#7 199.5 Collecting importlib-metadata
+#7 199.6   Downloading importlib_metadata-5.2.0-py3-none-any.whl (21 kB)
+#7 199.6 Collecting numpy>=1.21
+#7 199.7   Downloading numpy-1.23.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.1 MB)
+#7 202.3      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17.1/17.1 MB 6.4 MB/s eta 0:00:00
+#7 202.5 Collecting llvmlite<0.40,>=0.39.0dev0
+#7 202.6   Downloading llvmlite-0.39.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (34.6 MB)
+#7 207.8      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 34.6/34.6 MB 5.5 MB/s eta 0:00:00
+#7 208.5 Collecting protobuf<4,>=3.20.2
+#7 208.5   Downloading protobuf-3.20.3-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl (1.0 MB)
+#7 208.7      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 6.8 MB/s eta 0:00:00
+#7 208.7 Collecting typing-extensions>=3.6.2.1
+#7 208.7   Downloading typing_extensions-4.4.0-py3-none-any.whl (26 kB)
+#7 208.9 Collecting pytz>=2020.1
+#7 208.9   Downloading pytz-2022.7-py2.py3-none-any.whl (499 kB)
+#7 209.0      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 499.4/499.4 KB 8.0 MB/s eta 0:00:00
+#7 209.1 Collecting six>=1.5
+#7 209.1   Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+#7 209.4 Collecting tensorboard>=2.9.1
+#7 209.4   Downloading tensorboard-2.11.0-py3-none-any.whl (6.0 MB)
+#7 210.2      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.0/6.0 MB 7.6 MB/s eta 0:00:00
+#7 210.3 Collecting pyDeprecate>=0.3.1
+#7 210.4   Downloading pyDeprecate-0.3.2-py3-none-any.whl (10 kB)
+#7 210.5 Collecting fsspec[http]!=2021.06.0,>=2021.05.0
+#7 210.5   Downloading fsspec-2022.11.0-py3-none-any.whl (139 kB)
+#7 210.5      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 139.5/139.5 KB 7.1 MB/s eta 0:00:00
+#7 210.7 Collecting threadpoolctl>=2.0.0
+#7 210.7   Downloading threadpoolctl-3.1.0-py3-none-any.whl (14 kB)
+#7 211.1 Collecting cffi>=1.0
+#7 211.2   Downloading cffi-1.15.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (442 kB)
+#7 211.2      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 442.7/442.7 KB 6.9 MB/s eta 0:00:00
+#7 211.4 Collecting nvidia-cudnn-cu11==8.5.0.96
+#7 211.4   Downloading nvidia_cudnn_cu11-8.5.0.96-2-py3-none-manylinux1_x86_64.whl (557.1 MB)
+#7 292.7      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 557.1/557.1 MB 2.0 MB/s eta 0:00:00
+#7 294.3 Collecting nvidia-cuda-runtime-cu11==11.7.99
+#7 294.3   Downloading nvidia_cuda_runtime_cu11-11.7.99-py3-none-manylinux1_x86_64.whl (849 kB)
+#7 294.4      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 849.3/849.3 KB 5.5 MB/s eta 0:00:00
+#7 294.5 Collecting nvidia-cublas-cu11==11.10.3.66
+#7 294.6   Downloading nvidia_cublas_cu11-11.10.3.66-py3-none-manylinux1_x86_64.whl (317.1 MB)
+#7 338.1      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 317.1/317.1 MB 4.2 MB/s eta 0:00:00
+#7 339.1 Collecting nvidia-cuda-nvrtc-cu11==11.7.99
+#7 339.1   Downloading nvidia_cuda_nvrtc_cu11-11.7.99-2-py3-none-manylinux1_x86_64.whl (21.0 MB)
+#7 342.0      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 21.0/21.0 MB 7.0 MB/s eta 0:00:00
+#7 342.0 Requirement already satisfied: wheel in /usr/local/lib/python3.8/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch->nemo_toolkit[all]->-r requirements.txt (line 2)) (0.38.4)
+#7 343.0 Collecting filelock
+#7 343.0   Downloading filelock-3.8.2-py3-none-any.whl (10 kB)
+#7 343.2 Collecting requests
+#7 343.2   Downloading requests-2.28.1-py3-none-any.whl (62 kB)
+#7 343.2      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.8/62.8 KB 6.8 MB/s eta 0:00:00
+#7 343.5 Collecting tokenizers!=0.11.3,<0.13,>=0.11.1
+#7 343.7   Downloading tokenizers-0.12.1-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (6.6 MB)
+#7 344.5      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 8.2 MB/s eta 0:00:00
+#7 344.8 Collecting jmespath<2.0.0,>=0.7.1
+#7 344.8   Downloading jmespath-1.0.1-py3-none-any.whl (20 kB)
+#7 344.8 Collecting s3transfer<0.7.0,>=0.6.0
+#7 344.9   Downloading s3transfer-0.6.0-py3-none-any.whl (79 kB)
+#7 344.9      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.6/79.6 KB 1.3 MB/s eta 0:00:00
+#7 345.9 Collecting botocore<1.30.0,>=1.29.34
+#7 345.9   Downloading botocore-1.29.34-py3-none-any.whl (10.3 MB)
+#7 347.2      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.3/10.3 MB 8.2 MB/s eta 0:00:00
+#7 347.3 Collecting pybind11>=2.2
+#7 347.3   Using cached pybind11-2.10.2-py3-none-any.whl (222 kB)
+#7 347.5 Collecting aniso8601>=0.82
+#7 347.6   Downloading aniso8601-9.0.1-py2.py3-none-any.whl (52 kB)
+#7 347.6      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 52.8/52.8 KB 4.2 MB/s eta 0:00:00
+#7 347.6 Collecting Flask>=0.8
+#7 347.7   Downloading Flask-2.2.2-py3-none-any.whl (101 kB)
+#7 347.7      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 101.5/101.5 KB 11.2 MB/s eta 0:00:00
+#7 347.7 Collecting wcwidth>=0.2.5
+#7 347.7   Downloading wcwidth-0.2.5-py2.py3-none-any.whl (30 kB)
+#7 347.9 Collecting distance>=0.1.3
+#7 347.9   Downloading Distance-0.1.3.tar.gz (180 kB)
+#7 347.9      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 180.3/180.3 KB 8.6 MB/s eta 0:00:00
+#7 348.0   Preparing metadata (setup.py): started
+#7 348.2   Preparing metadata (setup.py): finished with status 'done'
+#7 348.5 Collecting pydantic>=1.9.1
+#7 348.6   Downloading pydantic-1.10.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.6 MB)
+#7 350.4      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.6/13.6 MB 7.3 MB/s eta 0:00:00
+#7 350.5 Collecting beautifulsoup4
+#7 350.6   Downloading beautifulsoup4-4.11.1-py3-none-any.whl (128 kB)
+#7 350.6      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 128.2/128.2 KB 6.8 MB/s eta 0:00:00
+#7 350.8 Collecting widgetsnbextension~=4.0
+#7 350.8   Downloading widgetsnbextension-4.0.4-py3-none-any.whl (2.0 MB)
+#7 351.1      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 8.0 MB/s eta 0:00:00
+#7 351.1 Collecting traitlets>=4.3.1
+#7 351.3   Downloading traitlets-5.8.0-py3-none-any.whl (116 kB)
+#7 351.3      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 116.8/116.8 KB 4.7 MB/s eta 0:00:00
+#7 351.4 Collecting ipython>=6.1.0
+#7 351.5   Downloading ipython-8.7.0-py3-none-any.whl (761 kB)
+#7 351.6      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 761.7/761.7 KB 8.9 MB/s eta 0:00:00
+#7 351.6 Collecting jupyterlab-widgets~=3.0
+#7 351.7   Downloading jupyterlab_widgets-3.0.4-py3-none-any.whl (384 kB)
+#7 351.7      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 384.3/384.3 KB 5.8 MB/s eta 0:00:00
+#7 351.8 Collecting ipykernel>=4.5.1
+#7 351.9   Downloading ipykernel-6.19.4-py3-none-any.whl (145 kB)
+#7 351.9      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 145.2/145.2 KB 4.6 MB/s eta 0:00:00
+#7 352.2 Collecting sortedcontainers>=2.0.4
+#7 352.2   Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+#7 352.4 Collecting sympy>=1.1
+#7 352.4   Downloading sympy-1.11.1-py3-none-any.whl (6.5 MB)
+#7 353.3      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.5/6.5 MB 7.6 MB/s eta 0:00:00
+#7 353.4 Collecting pyannote.database>=4.0.1
+#7 353.4   Downloading pyannote.database-4.1.3-py3-none-any.whl (41 kB)
+#7 353.4      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.6/41.6 KB 4.3 MB/s eta 0:00:00
+#7 353.5 Collecting docopt>=0.6.2
+#7 353.5   Downloading docopt-0.6.2.tar.gz (25 kB)
+#7 353.5   Preparing metadata (setup.py): started
+#7 353.7   Preparing metadata (setup.py): finished with status 'done'
+#7 353.9 Collecting iniconfig
+#7 353.9   Downloading iniconfig-1.1.1-py2.py3-none-any.whl (5.0 kB)
+#7 354.0 Collecting tomli>=1.0.0
+#7 354.0   Downloading tomli-2.0.1-py3-none-any.whl (12 kB)
+#7 354.1 Collecting pluggy<2.0,>=0.12
+#7 354.1   Downloading pluggy-1.0.0-py2.py3-none-any.whl (13 kB)
+#7 354.2 Collecting exceptiongroup>=1.0.0rc8
+#7 354.2   Downloading exceptiongroup-1.0.4-py3-none-any.whl (14 kB)
+#7 354.3 Collecting ruamel.yaml.clib>=0.2.6
+#7 354.4   Downloading ruamel.yaml.clib-0.2.7-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl (555 kB)
+#7 354.5      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 555.3/555.3 KB 6.4 MB/s eta 0:00:00
+#7 354.6 Collecting colorama
+#7 354.6   Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+#7 354.6 Collecting portalocker
+#7 354.7   Downloading portalocker-2.6.0-py2.py3-none-any.whl (15 kB)
+#7 355.3 Collecting lxml
+#7 355.4   Downloading lxml-4.9.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl (7.1 MB)
+#7 356.2      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 8.5 MB/s eta 0:00:00
+#7 356.3 Collecting ipadic<2.0,>=1.0
+#7 356.4   Downloading ipadic-1.0.0.tar.gz (13.4 MB)
+#7 358.0      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.4/13.4 MB 7.9 MB/s eta 0:00:00
+#7 358.6   Preparing metadata (setup.py): started
+#7 358.8   Preparing metadata (setup.py): finished with status 'done'
+#7 359.0 Collecting mecab-python3==1.0.5
+#7 359.1   Downloading mecab_python3-1.0.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (577 kB)
+#7 359.2      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 577.3/577.3 KB 6.6 MB/s eta 0:00:00
+#7 359.4 Collecting Jinja2>=3.0
+#7 359.4   Downloading Jinja2-3.1.2-py3-none-any.whl (133 kB)
+#7 359.5      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.1/133.1 KB 4.7 MB/s eta 0:00:00
+#7 359.5 Collecting sphinxcontrib-applehelp
+#7 359.5   Downloading sphinxcontrib_applehelp-1.0.2-py2.py3-none-any.whl (121 kB)
+#7 359.6      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.2/121.2 KB 6.8 MB/s eta 0:00:00
+#7 359.6 Collecting sphinxcontrib-qthelp
+#7 359.6   Downloading sphinxcontrib_qthelp-1.0.3-py2.py3-none-any.whl (90 kB)
+#7 359.7      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.6/90.6 KB 4.9 MB/s eta 0:00:00
+#7 359.7 Collecting sphinxcontrib-htmlhelp>=2.0.0
+#7 359.7   Downloading sphinxcontrib_htmlhelp-2.0.0-py2.py3-none-any.whl (100 kB)
+#7 359.7      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.5/100.5 KB 7.8 MB/s eta 0:00:00
+#7 359.8 Collecting sphinxcontrib-serializinghtml>=1.1.5
+#7 359.8   Downloading sphinxcontrib_serializinghtml-1.1.5-py2.py3-none-any.whl (94 kB)
+#7 359.9      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 94.0/94.0 KB 2.2 MB/s eta 0:00:00
+#7 360.0 Collecting Pygments>=2.12
+#7 360.0   Downloading Pygments-2.13.0-py3-none-any.whl (1.1 MB)
+#7 360.1      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 7.4 MB/s eta 0:00:00
+#7 360.2 Collecting imagesize>=1.3
+#7 360.2   Downloading imagesize-1.4.1-py2.py3-none-any.whl (8.8 kB)
+#7 360.2 Collecting sphinxcontrib-devhelp
+#7 360.3   Downloading sphinxcontrib_devhelp-1.0.2-py2.py3-none-any.whl (84 kB)
+#7 360.3      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 84.7/84.7 KB 7.9 MB/s eta 0:00:00
+#7 360.3 Collecting alabaster<0.8,>=0.7
+#7 360.3   Downloading alabaster-0.7.12-py2.py3-none-any.whl (14 kB)
+#7 360.4 Collecting babel>=2.9
+#7 360.5   Downloading Babel-2.11.0-py3-none-any.whl (9.5 MB)
+#7 361.7      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.5/9.5 MB 7.5 MB/s eta 0:00:00
+#7 361.8 Collecting snowballstemmer>=2.0
+#7 361.9   Downloading snowballstemmer-2.2.0-py2.py3-none-any.whl (93 kB)
+#7 361.9      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 93.0/93.0 KB 5.6 MB/s eta 0:00:00
+#7 362.0 Collecting sphinxcontrib-jsmath
+#7 362.1   Downloading sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl (5.1 kB)
+#7 362.1 Collecting docutils<0.20,>=0.14
+#7 362.2   Downloading docutils-0.19-py3-none-any.whl (570 kB)
+#7 362.2      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 570.5/570.5 KB 8.0 MB/s eta 0:00:00
+#7 362.4 Collecting pybtex-docutils>=1.0.0
+#7 362.4   Downloading pybtex_docutils-1.0.2-py3-none-any.whl (6.3 kB)
+#7 362.5 Collecting pybtex>=0.24
+#7 362.5   Downloading pybtex-0.24.0-py2.py3-none-any.whl (561 kB)
+#7 362.6      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 561.4/561.4 KB 7.0 MB/s eta 0:00:00
+#7 362.8 Collecting plac
+#7 362.8   Downloading plac-1.3.5-py2.py3-none-any.whl (22 kB)
+#7 362.9 Collecting termcolor
+#7 362.9   Downloading termcolor-2.1.1-py3-none-any.whl (6.2 kB)
+#7 363.0 Collecting loguru
+#7 363.1   Downloading loguru-0.6.0-py3-none-any.whl (58 kB)
+#7 363.1      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.3/58.3 KB 5.9 MB/s eta 0:00:00
+#7 363.3 Collecting promise<3,>=2.0
+#7 363.3   Downloading promise-2.3.tar.gz (19 kB)
+#7 363.3   Preparing metadata (setup.py): started
+#7 363.6   Preparing metadata (setup.py): finished with status 'done'
+#7 363.8 Collecting sentry-sdk>=1.0.0
+#7 363.8   Downloading sentry_sdk-1.12.1-py2.py3-none-any.whl (174 kB)
+#7 363.8      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 174.3/174.3 KB 7.6 MB/s eta 0:00:00
+#7 363.8 Collecting pathtools
+#7 363.9   Downloading pathtools-0.1.2.tar.gz (11 kB)
+#7 363.9   Preparing metadata (setup.py): started
+#7 364.1   Preparing metadata (setup.py): finished with status 'done'
+#7 364.2 Collecting shortuuid>=0.5.0
+#7 364.2   Downloading shortuuid-1.0.11-py3-none-any.whl (10 kB)
+#7 364.3 Collecting docker-pycreds>=0.4.0
+#7 364.3   Downloading docker_pycreds-0.4.0-py2.py3-none-any.whl (9.0 kB)
+#7 364.5 Collecting GitPython>=1.0.0
+#7 364.5   Downloading GitPython-3.1.29-py3-none-any.whl (182 kB)
+#7 364.5      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 182.5/182.5 KB 6.5 MB/s eta 0:00:00
+#7 364.8 Collecting psutil>=5.0.0
+#7 364.8   Downloading psutil-5.9.4-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (280 kB)
+#7 364.9      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 280.2/280.2 KB 4.7 MB/s eta 0:00:00
+#7 365.0 Collecting setproctitle
+#7 365.0   Downloading setproctitle-1.3.2-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (31 kB)
+#7 365.3 Collecting urllib3<1.27,>=1.25.4
+#7 365.3   Downloading urllib3-1.26.13-py2.py3-none-any.whl (140 kB)
+#7 365.3      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 140.6/140.6 KB 5.6 MB/s eta 0:00:00
+#7 365.4 Collecting pycparser
+#7 365.4   Downloading pycparser-2.21-py2.py3-none-any.whl (118 kB)
+#7 365.4      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.7/118.7 KB 6.6 MB/s eta 0:00:00
+#7 365.7 Collecting Werkzeug>=2.2.2
+#7 365.8   Downloading Werkzeug-2.2.2-py3-none-any.whl (232 kB)
+#7 365.8      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 232.7/232.7 KB 6.5 MB/s eta 0:00:00
+#7 365.9 Collecting itsdangerous>=2.0
+#7 365.9   Downloading itsdangerous-2.1.2-py3-none-any.whl (15 kB)
+#7 366.6 Collecting aiohttp!=4.0.0a0,!=4.0.0a1
+#7 366.7   Downloading aiohttp-3.8.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.0 MB)
+#7 366.8      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 8.3 MB/s eta 0:00:00
+#7 366.9 Collecting gitdb<5,>=4.0.1
+#7 366.9   Downloading gitdb-4.0.10-py3-none-any.whl (62 kB)
+#7 366.9      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.7/62.7 KB 7.1 MB/s eta 0:00:00
+#7 367.0 Collecting zipp>=0.5
+#7 367.1   Downloading zipp-3.11.0-py3-none-any.whl (6.6 kB)
+#7 367.5 Collecting debugpy>=1.0
+#7 367.6   Downloading debugpy-1.6.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.1 MB)
+#7 368.0      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 7.1 MB/s eta 0:00:00
+#7 368.1 Collecting nest-asyncio
+#7 368.2   Downloading nest_asyncio-1.5.6-py3-none-any.whl (5.2 kB)
+#7 368.2 Collecting comm>=0.1.1
+#7 368.2   Downloading comm-0.1.2-py3-none-any.whl (6.5 kB)
+#7 368.3 Collecting jupyter-client>=6.1.12
+#7 368.4   Downloading jupyter_client-7.4.8-py3-none-any.whl (133 kB)
+#7 368.4      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.5/133.5 KB 4.0 MB/s eta 0:00:00
+#7 368.5 Collecting tornado>=6.1
+#7 368.7   Downloading tornado-6.2-cp37-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (423 kB)
+#7 368.7      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 424.0/424.0 KB 7.0 MB/s eta 0:00:00
+#7 369.1 Collecting pyzmq>=17
+#7 369.2   Downloading pyzmq-24.0.1-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.1 MB)
+#7 369.3      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 8.2 MB/s eta 0:00:00
+#7 369.3 Collecting matplotlib-inline>=0.1
+#7 369.4   Downloading matplotlib_inline-0.1.6-py3-none-any.whl (9.4 kB)
+#7 369.6 Collecting stack-data
+#7 369.6   Downloading stack_data-0.6.2-py3-none-any.whl (24 kB)
+#7 369.6 Collecting pexpect>4.3
+#7 369.6   Downloading pexpect-4.8.0-py2.py3-none-any.whl (59 kB)
+#7 369.7      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.0/59.0 KB 7.8 MB/s eta 0:00:00
+#7 369.7 Collecting pickleshare
+#7 369.7   Downloading pickleshare-0.7.5-py2.py3-none-any.whl (6.9 kB)
+#7 369.8 Collecting jedi>=0.16
+#7 369.8   Downloading jedi-0.18.2-py2.py3-none-any.whl (1.6 MB)
+#7 370.0      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 8.0 MB/s eta 0:00:00
+#7 370.1 Collecting backcall
+#7 370.1   Downloading backcall-0.2.0-py2.py3-none-any.whl (11 kB)
+#7 370.2 Collecting prompt-toolkit<3.1.0,>=3.0.11
+#7 370.2   Downloading prompt_toolkit-3.0.36-py3-none-any.whl (386 kB)
+#7 370.3      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 386.4/386.4 KB 7.7 MB/s eta 0:00:00
+#7 370.4 Collecting MarkupSafe>=2.0
+#7 370.4   Downloading MarkupSafe-2.1.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25 kB)
+#7 370.8 Collecting typer[all]>=0.2.1
+#7 370.8   Downloading typer-0.7.0-py3-none-any.whl (38 kB)
+#7 371.0 Collecting latexcodec>=1.0.4
+#7 371.0   Downloading latexcodec-2.0.1-py2.py3-none-any.whl (18 kB)
+#7 371.3 Collecting idna<4,>=2.5
+#7 371.3   Downloading idna-3.4-py3-none-any.whl (61 kB)
+#7 371.3      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.5/61.5 KB 6.4 MB/s eta 0:00:00
+#7 371.4 Collecting certifi>=2017.4.17
+#7 371.4   Downloading certifi-2022.12.7-py3-none-any.whl (155 kB)
+#7 371.4      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.3/155.3 KB 9.4 MB/s eta 0:00:00
+#7 371.6 Collecting charset-normalizer<3,>=2
+#7 371.6   Downloading charset_normalizer-2.1.1-py3-none-any.whl (39 kB)
+#7 372.3 Collecting mpmath>=0.19
+#7 372.3   Downloading mpmath-1.2.1-py3-none-any.whl (532 kB)
+#7 372.4      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 532.6/532.6 KB 7.6 MB/s eta 0:00:00
+#7 372.5 Collecting google-auth-oauthlib<0.5,>=0.4.1
+#7 372.5   Downloading google_auth_oauthlib-0.4.6-py2.py3-none-any.whl (18 kB)
+#7 372.6 Collecting tensorboard-data-server<0.7.0,>=0.6.0
+#7 372.6   Downloading tensorboard_data_server-0.6.1-py3-none-manylinux2010_x86_64.whl (4.9 MB)
+#7 373.3      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 7.1 MB/s eta 0:00:00
+#7 373.6 Collecting markdown>=2.6.8
+#7 373.6   Downloading Markdown-3.4.1-py3-none-any.whl (93 kB)
+#7 373.7      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 93.3/93.3 KB 5.2 MB/s eta 0:00:00
+#7 373.7 Collecting tensorboard-plugin-wit>=1.6.0
+#7 373.8   Downloading tensorboard_plugin_wit-1.8.1-py3-none-any.whl (781 kB)
+#7 373.9      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 781.3/781.3 KB 7.4 MB/s eta 0:00:00
+#7 375.1 Collecting grpcio>=1.24.3
+#7 375.1   Downloading grpcio-1.51.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.8 MB)
+#7 375.8      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 6.7 MB/s eta 0:00:00
+#7 376.0 Collecting google-auth<3,>=1.6.3
+#7 376.0   Downloading google_auth-2.15.0-py2.py3-none-any.whl (177 kB)
+#7 376.1      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 177.0/177.0 KB 5.3 MB/s eta 0:00:00
+#7 376.2 Collecting absl-py>=0.4
+#7 376.2   Downloading absl_py-1.3.0-py3-none-any.whl (124 kB)
+#7 376.2      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 124.6/124.6 KB 8.0 MB/s eta 0:00:00
+#7 376.6 Collecting soupsieve>1.2
+#7 376.6   Downloading soupsieve-2.3.2.post1-py3-none-any.whl (37 kB)
+#7 376.9 Requirement already satisfied: pip in /usr/local/lib/python3.8/site-packages (from pip-api->isort[requirements]<5->nemo_toolkit[all]->-r requirements.txt (line 2)) (22.0.4)
+#7 377.0 Collecting yarg
+#7 377.0   Downloading yarg-0.1.9-py2.py3-none-any.whl (19 kB)
+#7 377.1 Collecting PySocks!=1.5.7,>=1.5.6
+#7 377.1   Downloading PySocks-1.7.1-py3-none-any.whl (16 kB)
+#7 378.0 Collecting multidict<7.0,>=4.5
+#7 378.0   Downloading multidict-6.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (121 kB)
+#7 378.0      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.3/121.3 KB 6.5 MB/s eta 0:00:00
+#7 378.2 Collecting frozenlist>=1.1.1
+#7 378.2   Downloading frozenlist-1.3.3-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (161 kB)
+#7 378.2      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 161.3/161.3 KB 7.1 MB/s eta 0:00:00
+#7 378.3 Collecting async-timeout<5.0,>=4.0.0a3
+#7 378.3   Downloading async_timeout-4.0.2-py3-none-any.whl (5.8 kB)
+#7 378.6 Collecting yarl<2.0,>=1.0
+#7 378.7   Downloading yarl-1.8.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (262 kB)
+#7 378.7      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 262.1/262.1 KB 4.7 MB/s eta 0:00:00
+#7 378.9 Collecting aiosignal>=1.1.2
+#7 378.9   Downloading aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
+#7 379.1 Collecting smmap<6,>=3.0.1
+#7 379.2   Downloading smmap-5.0.0-py3-none-any.whl (24 kB)
+#7 379.3 Collecting rsa<5,>=3.1.4
+#7 379.3   Downloading rsa-4.9-py3-none-any.whl (34 kB)
+#7 379.4 Collecting cachetools<6.0,>=2.0.0
+#7 379.4   Downloading cachetools-5.2.0-py3-none-any.whl (9.3 kB)
+#7 379.5 Collecting pyasn1-modules>=0.2.1
+#7 379.5   Downloading pyasn1_modules-0.2.8-py2.py3-none-any.whl (155 kB)
+#7 379.5      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.3/155.3 KB 7.0 MB/s eta 0:00:00
+#7 379.6 Collecting requests-oauthlib>=0.7.0
+#7 379.6   Downloading requests_oauthlib-1.3.1-py2.py3-none-any.whl (23 kB)
+#7 379.9 Collecting parso<0.9.0,>=0.8.0
+#7 380.0   Downloading parso-0.8.3-py2.py3-none-any.whl (100 kB)
+#7 380.0      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.8/100.8 KB 7.2 MB/s eta 0:00:00
+#7 380.1 Collecting jupyter-core>=4.9.2
+#7 380.1   Downloading jupyter_core-5.1.0-py3-none-any.whl (92 kB)
+#7 380.2      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 92.7/92.7 KB 10.8 MB/s eta 0:00:00
+#7 380.2 Collecting entrypoints
+#7 380.3   Downloading entrypoints-0.4-py3-none-any.whl (5.3 kB)
+#7 380.6 Collecting ptyprocess>=0.5
+#7 380.6   Downloading ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+#7 381.1 Collecting rich<13.0.0,>=10.11.0
+#7 381.1   Downloading rich-12.6.0-py3-none-any.whl (237 kB)
+#7 381.1      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 237.5/237.5 KB 4.7 MB/s eta 0:00:00
+#7 381.2 Collecting shellingham<2.0.0,>=1.3.0
+#7 381.2   Downloading shellingham-1.5.0-py2.py3-none-any.whl (9.3 kB)
+#7 381.7 Collecting executing>=1.2.0
+#7 381.7   Downloading executing-1.2.0-py2.py3-none-any.whl (24 kB)
+#7 381.8 Collecting asttokens>=2.1.0
+#7 381.9   Downloading asttokens-2.2.1-py2.py3-none-any.whl (26 kB)
+#7 382.0 Collecting pure-eval
+#7 382.0   Downloading pure_eval-0.2.2-py3-none-any.whl (11 kB)
+#7 382.3 Collecting platformdirs>=2.5
+#7 382.3   Downloading platformdirs-2.6.0-py3-none-any.whl (14 kB)
+#7 382.6 Collecting pyasn1<0.5.0,>=0.4.6
+#7 382.6   Downloading pyasn1-0.4.8-py2.py3-none-any.whl (77 kB)
+#7 382.6      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 77.1/77.1 KB 18.9 MB/s eta 0:00:00
+#7 382.7 Collecting oauthlib>=3.0.0
+#7 382.7   Downloading oauthlib-3.2.2-py3-none-any.whl (151 kB)
+#7 382.7      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.7/151.7 KB 6.2 MB/s eta 0:00:00
+#7 382.8 Collecting commonmark<0.10.0,>=0.9.0
+#7 382.8   Downloading commonmark-0.9.1-py2.py3-none-any.whl (51 kB)
+#7 382.9      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 51.1/51.1 KB 6.6 MB/s eta 0:00:00
+#7 383.4 Building wheels for collected packages: antlr4-python3-runtime, progress, sacremoses, fasttext, jieba, kaldi-python-io, kaldiio, pesq, pystoi, sentence-transformers, wget, audioread, distance, docopt, ipadic, promise, pathtools
+#7 383.4   Building wheel for antlr4-python3-runtime (setup.py): started
+#7 383.9   Building wheel for antlr4-python3-runtime (setup.py): finished with status 'done'
+#7 383.9   Created wheel for antlr4-python3-runtime: filename=antlr4_python3_runtime-4.8-py3-none-any.whl size=141231 sha256=3f96575e9ceacb508e5074c20dc7f88797ac4fc1926c26a76f11b8016e4b9e0e
+#7 383.9   Stored in directory: /root/.cache/pip/wheels/c8/d0/ab/d43c02eaddc5b9004db86950802442ad9a26f279c619e28da0
+#7 383.9   Building wheel for progress (setup.py): started
+#7 384.1   Building wheel for progress (setup.py): finished with status 'done'
+#7 384.1   Created wheel for progress: filename=progress-1.6-py3-none-any.whl size=9630 sha256=9af3e4f7dfc6543727da3754a09cb6f6cbf043d9d4086f061812980fb72f4989
+#7 384.1   Stored in directory: /root/.cache/pip/wheels/bb/01/5a/c916509df9b12c6465864251dbe826def8e31a16fa7da54f08
+#7 384.1   Building wheel for sacremoses (setup.py): started
+#7 384.5   Building wheel for sacremoses (setup.py): finished with status 'done'
+#7 384.5   Created wheel for sacremoses: filename=sacremoses-0.0.53-py3-none-any.whl size=895260 sha256=dd6c5cf559d265d7fa35a603d26c3d59bc9b5268def7ea542739c2aa8fdaf335
+#7 384.5   Stored in directory: /root/.cache/pip/wheels/82/ab/9b/c15899bf659ba74f623ac776e861cf2eb8608c1825ddec66a4
+#7 384.6   Building wheel for fasttext (setup.py): started
+#7 384.8   Building wheel for fasttext (setup.py): finished with status 'error'
+#7 384.8   error: subprocess-exited-with-error
+#7 384.8   
+#7 384.8   × python setup.py bdist_wheel did not run successfully.
+#7 384.8   │ exit code: 1
+#7 384.8   ╰─> [57 lines of output]
+#7 384.8       /usr/local/lib/python3.8/site-packages/setuptools/dist.py:697: UserWarning: Usage of dash-separated 'description-file' will not be supported in future versions. Please use the underscore name 'description_file' instead
+#7 384.8         warnings.warn(
+#7 384.8       running bdist_wheel
+#7 384.8       running build
+#7 384.8       running build_py
+#7 384.8       creating build
+#7 384.8       creating build/lib.linux-x86_64-3.8
+#7 384.8       creating build/lib.linux-x86_64-3.8/fasttext
+#7 384.8       copying python/fasttext_module/fasttext/FastText.py -> build/lib.linux-x86_64-3.8/fasttext
+#7 384.8       copying python/fasttext_module/fasttext/__init__.py -> build/lib.linux-x86_64-3.8/fasttext
+#7 384.8       creating build/lib.linux-x86_64-3.8/fasttext/util
+#7 384.8       copying python/fasttext_module/fasttext/util/util.py -> build/lib.linux-x86_64-3.8/fasttext/util
+#7 384.8       copying python/fasttext_module/fasttext/util/__init__.py -> build/lib.linux-x86_64-3.8/fasttext/util
+#7 384.8       creating build/lib.linux-x86_64-3.8/fasttext/tests
+#7 384.8       copying python/fasttext_module/fasttext/tests/test_script.py -> build/lib.linux-x86_64-3.8/fasttext/tests
+#7 384.8       copying python/fasttext_module/fasttext/tests/test_configurations.py -> build/lib.linux-x86_64-3.8/fasttext/tests
+#7 384.8       copying python/fasttext_module/fasttext/tests/__init__.py -> build/lib.linux-x86_64-3.8/fasttext/tests
+#7 384.8       running build_ext
+#7 384.8       creating tmp
+#7 384.8       gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -I/usr/local/include/python3.8 -c /tmp/tmpkvppwo6n.cpp -o tmp/tmpkvppwo6n.o -std=c++14
+#7 384.8       unable to execute 'gcc': No such file or directory
+#7 384.8       gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -I/usr/local/include/python3.8 -c /tmp/tmpcgj1cciq.cpp -o tmp/tmpcgj1cciq.o -std=c++11
+#7 384.8       unable to execute 'gcc': No such file or directory
+#7 384.8       Traceback (most recent call last):
+#7 384.8         File "<string>", line 2, in <module>
+#7 384.8         File "<pip-setuptools-caller>", line 34, in <module>
+#7 384.8         File "/tmp/pip-install-bvhzj6pa/fasttext_430be93d55444fe9b6f4de1d2d5ce141/setup.py", line 168, in <module>
+#7 384.8           setup(
+#7 384.8         File "/usr/local/lib/python3.8/site-packages/setuptools/__init__.py", line 153, in setup
+#7 384.8           return distutils.core.setup(**attrs)
+#7 384.8         File "/usr/local/lib/python3.8/distutils/core.py", line 148, in setup
+#7 384.8           dist.run_commands()
+#7 384.8         File "/usr/local/lib/python3.8/distutils/dist.py", line 966, in run_commands
+#7 384.8           self.run_command(cmd)
+#7 384.8         File "/usr/local/lib/python3.8/distutils/dist.py", line 985, in run_command
+#7 384.8           cmd_obj.run()
+#7 384.8         File "/usr/local/lib/python3.8/site-packages/wheel/bdist_wheel.py", line 325, in run
+#7 384.8           self.run_command("build")
+#7 384.8         File "/usr/local/lib/python3.8/distutils/cmd.py", line 313, in run_command
+#7 384.8           self.distribution.run_command(command)
+#7 384.8         File "/usr/local/lib/python3.8/distutils/dist.py", line 985, in run_command
+#7 384.8           cmd_obj.run()
+#7 384.8         File "/usr/local/lib/python3.8/distutils/command/build.py", line 135, in run
+#7 384.8           self.run_command(cmd_name)
+#7 384.8         File "/usr/local/lib/python3.8/distutils/cmd.py", line 313, in run_command
+#7 384.8           self.distribution.run_command(command)
+#7 384.8         File "/usr/local/lib/python3.8/distutils/dist.py", line 985, in run_command
+#7 384.8           cmd_obj.run()
+#7 384.8         File "/usr/local/lib/python3.8/site-packages/setuptools/command/build_ext.py", line 79, in run
+#7 384.8           _build_ext.run(self)
+#7 384.8         File "/usr/local/lib/python3.8/distutils/command/build_ext.py", line 340, in run
+#7 384.8           self.build_extensions()
+#7 384.8         File "/tmp/pip-install-bvhzj6pa/fasttext_430be93d55444fe9b6f4de1d2d5ce141/setup.py", line 146, in build_extensions
+#7 384.8           opts.append(cpp_flag(self.compiler))
+#7 384.8         File "/tmp/pip-install-bvhzj6pa/fasttext_430be93d55444fe9b6f4de1d2d5ce141/setup.py", line 108, in cpp_flag
+#7 384.8           raise RuntimeError(
+#7 384.8       RuntimeError: Unsupported compiler -- at least C++11 support is needed!
+#7 384.8       [end of output]
+#7 384.8   
+#7 384.8   note: This error originates from a subprocess, and is likely not a problem with pip.
+#7 384.8   ERROR: Failed building wheel for fasttext
+#7 384.8   Running setup.py clean for fasttext
+#7 385.1   Building wheel for jieba (setup.py): started
+#7 387.2   Building wheel for jieba (setup.py): finished with status 'done'
+#7 387.2   Created wheel for jieba: filename=jieba-0.42.1-py3-none-any.whl size=19314477 sha256=0794f26cbeae68add302b03f5163fb6e6b64f7b87217739c2937b5f153032168
+#7 387.2   Stored in directory: /root/.cache/pip/wheels/ca/38/d8/dfdfe73bec1d12026b30cb7ce8da650f3f0ea2cf155ea018ae
+#7 387.2   Building wheel for kaldi-python-io (setup.py): started
+#7 387.5   Building wheel for kaldi-python-io (setup.py): finished with status 'done'
+#7 387.5   Created wheel for kaldi-python-io: filename=kaldi_python_io-1.2.2-py3-none-any.whl size=8970 sha256=48a5c92fa531b6407ee43938bcede4a90ea1150cf1668111d99a8df772219e29
+#7 387.5   Stored in directory: /root/.cache/pip/wheels/8c/da/46/4afb7e26376c33af41c3ec388d5b63d34d186f6df1545cac30
+#7 387.5   Building wheel for kaldiio (setup.py): started
+#7 387.8   Building wheel for kaldiio (setup.py): finished with status 'done'
+#7 387.8   Created wheel for kaldiio: filename=kaldiio-2.17.2-py3-none-any.whl size=24471 sha256=21460a7e61cebcb088d2310624217de201a9178716845c94d2f632d6beb03a27
+#7 387.8   Stored in directory: /root/.cache/pip/wheels/49/b3/00/af2103b510836161326bb51e27795407b07fda6969d0ae5967
+#7 387.8   Building wheel for pesq (setup.py): started
+#7 389.2   Building wheel for pesq (setup.py): finished with status 'error'
+#7 389.2   error: subprocess-exited-with-error
+#7 389.2   
+#7 389.2   × python setup.py bdist_wheel did not run successfully.
+#7 389.2   │ exit code: 1
+#7 389.2   ╰─> [27 lines of output]
+#7 389.2       running bdist_wheel
+#7 389.2       running build
+#7 389.2       running build_py
+#7 389.2       creating build
+#7 389.2       creating build/lib.linux-x86_64-3.8
+#7 389.2       creating build/lib.linux-x86_64-3.8/pesq
+#7 389.2       copying pesq/_pesq.py -> build/lib.linux-x86_64-3.8/pesq
+#7 389.2       copying pesq/__init__.py -> build/lib.linux-x86_64-3.8/pesq
+#7 389.2       copying pesq/cypesq.pyx -> build/lib.linux-x86_64-3.8/pesq
+#7 389.2       copying pesq/pesq.h -> build/lib.linux-x86_64-3.8/pesq
+#7 389.2       copying pesq/pesqio.h -> build/lib.linux-x86_64-3.8/pesq
+#7 389.2       copying pesq/pesqmain.h -> build/lib.linux-x86_64-3.8/pesq
+#7 389.2       copying pesq/pesqpar.h -> build/lib.linux-x86_64-3.8/pesq
+#7 389.2       copying pesq/dsp.h -> build/lib.linux-x86_64-3.8/pesq
+#7 389.2       copying pesq/dsp.c -> build/lib.linux-x86_64-3.8/pesq
+#7 389.2       copying pesq/pesqdsp.c -> build/lib.linux-x86_64-3.8/pesq
+#7 389.2       copying pesq/pesqmod.c -> build/lib.linux-x86_64-3.8/pesq
+#7 389.2       running build_ext
+#7 389.2       cythoning pesq/cypesq.pyx to pesq/cypesq.c
+#7 389.2       /tmp/pip-install-bvhzj6pa/pesq_01ff600194fa42ccaf8a1484e15955e2/.eggs/Cython-0.29.32-py3.8-linux-x86_64.egg/Cython/Compiler/Main.py:369: FutureWarning: Cython directive 'language_level' not set, using 2 for now (Py2). This will change in a later release! File: /tmp/pip-install-bvhzj6pa/pesq_01ff600194fa42ccaf8a1484e15955e2/pesq/cypesq.pyx
+#7 389.2         tree = Parsing.p_module(s, pxd, full_module_name)
+#7 389.2       building 'cypesq' extension
+#7 389.2       creating build/temp.linux-x86_64-3.8
+#7 389.2       creating build/temp.linux-x86_64-3.8/pesq
+#7 389.2       gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -Ipesq -I/tmp/pip-install-bvhzj6pa/pesq_01ff600194fa42ccaf8a1484e15955e2/.eggs/numpy-1.24.0-py3.8-linux-x86_64.egg/numpy/core/include -I/tmp/pip-install-bvhzj6pa/pesq_01ff600194fa42ccaf8a1484e15955e2/.eggs/numpy-1.24.0-py3.8-linux-x86_64.egg/numpy/core/include -I/usr/local/include/python3.8 -c pesq/cypesq.c -o build/temp.linux-x86_64-3.8/pesq/cypesq.o
+#7 389.2       unable to execute 'gcc': No such file or directory
+#7 389.2       error: command 'gcc' failed with exit status 1
+#7 389.2       [end of output]
+#7 389.2   
+#7 389.2   note: This error originates from a subprocess, and is likely not a problem with pip.
+#7 389.2   ERROR: Failed building wheel for pesq
+#7 389.2   Running setup.py clean for pesq
+#7 389.4   Building wheel for pystoi (setup.py): started
+#7 389.7   Building wheel for pystoi (setup.py): finished with status 'done'
+#7 389.7   Created wheel for pystoi: filename=pystoi-0.3.3-py2.py3-none-any.whl size=7792 sha256=7c27fb41f8d881436715b4ebef5be57973697e5f0b5abeb1e5b3eb846f18db5e
+#7 389.7   Stored in directory: /root/.cache/pip/wheels/62/35/75/c07f0861a60fb8aacf44fdd5c8c214a224a6c9edb4a4e1402f
+#7 389.7   Building wheel for sentence-transformers (setup.py): started
+#7 390.0   Building wheel for sentence-transformers (setup.py): finished with status 'done'
+#7 390.0   Created wheel for sentence-transformers: filename=sentence_transformers-2.2.2-py3-none-any.whl size=125938 sha256=61e6f79cdd7a1dcc3961dd1f192b27ec5dee2feb10e1a78efc4db3213263e667
+#7 390.0   Stored in directory: /root/.cache/pip/wheels/5e/6f/8c/d88aec621f3f542d26fac0342bef5e693335d125f4e54aeffe
+#7 390.0   Building wheel for wget (setup.py): started
+#7 390.3   Building wheel for wget (setup.py): finished with status 'done'
+#7 390.3   Created wheel for wget: filename=wget-3.2-py3-none-any.whl size=9674 sha256=b1028a5af9923677d704b16563836ea23b509c846fcc1058824c95bfdc7cd40d
+#7 390.3   Stored in directory: /root/.cache/pip/wheels/bd/a8/c3/3cf2c14a1837a4e04bd98631724e81f33f462d86a1d895fae0
+#7 390.3   Building wheel for audioread (setup.py): started
+#7 390.6   Building wheel for audioread (setup.py): finished with status 'done'
+#7 390.6   Created wheel for audioread: filename=audioread-3.0.0-py3-none-any.whl size=23706 sha256=9844026dfa16b5da6dec95c046d469d6c67d0f29f120c41d45dd87f17ec9fccc
+#7 390.6   Stored in directory: /root/.cache/pip/wheels/0a/ed/be/49df2538fca496690a024a4374455584d65c2afd6fc3d6e9c7
+#7 390.6   Building wheel for distance (setup.py): started
+#7 390.8   Building wheel for distance (setup.py): finished with status 'done'
+#7 390.8   Created wheel for distance: filename=Distance-0.1.3-py3-none-any.whl size=16275 sha256=136d52e8a173113b795a1629dfd7c5856d7bf6480ac4b8168e17f98570383731
+#7 390.8   Stored in directory: /root/.cache/pip/wheels/fb/a8/64/6edcab63ec51512a87cacf9b3563c711ad6b7b05d61b704493
+#7 390.8   Building wheel for docopt (setup.py): started
+#7 391.1   Building wheel for docopt (setup.py): finished with status 'done'
+#7 391.1   Created wheel for docopt: filename=docopt-0.6.2-py2.py3-none-any.whl size=13723 sha256=dd17edc18dbf57a4564bdc489c9bb1f0320ef71999cf6964f3f01b754519c495
+#7 391.1   Stored in directory: /root/.cache/pip/wheels/56/ea/58/ead137b087d9e326852a851351d1debf4ada529b6ac0ec4e8c
+#7 391.1   Building wheel for ipadic (setup.py): started
+#7 394.0   Building wheel for ipadic (setup.py): finished with status 'done'
+#7 394.0   Created wheel for ipadic: filename=ipadic-1.0.0-py3-none-any.whl size=13556723 sha256=49edeb3410c7963be27843d6bed2a01021be4a03738fd787bf4f452ec1a158e4
+#7 394.0   Stored in directory: /root/.cache/pip/wheels/45/b7/f5/a21e68db846eedcd00d69e37d60bab3f68eb20b1d99cdff652
+#7 394.0   Building wheel for promise (setup.py): started
+#7 394.3   Building wheel for promise (setup.py): finished with status 'done'
+#7 394.3   Created wheel for promise: filename=promise-2.3-py3-none-any.whl size=21502 sha256=ce4a2d1b710933eb8630da29be8da7fac93d498e2eae867222ecf41bfc8a037c
+#7 394.3   Stored in directory: /root/.cache/pip/wheels/54/aa/01/724885182f93150035a2a91bce34a12877e8067a97baaf5dc8
+#7 394.3   Building wheel for pathtools (setup.py): started
+#7 394.6   Building wheel for pathtools (setup.py): finished with status 'done'
+#7 394.6   Created wheel for pathtools: filename=pathtools-0.1.2-py3-none-any.whl size=8806 sha256=c62faebeb21dc250edc62859f519a2aa5cc2edec812718068cae1db5a08ad31c
+#7 394.6   Stored in directory: /root/.cache/pip/wheels/4c/8e/7e/72fbc243e1aeecae64a96875432e70d4e92f3d2d18123be004
+#7 394.6 Successfully built antlr4-python3-runtime progress sacremoses jieba kaldi-python-io kaldiio pystoi sentence-transformers wget audioread distance docopt ipadic promise pathtools
+#7 394.6 Failed to build fasttext pesq
+#7 397.5 Installing collected packages: wget, wcwidth, tokenizers, text-unidecode, tensorboard-plugin-wit, sortedcontainers, snowballstemmer, sentencepiece, pytz, pydub, pyasn1, pure-eval, ptyprocess, progress, plac, pickleshare, pesq, pathtools, parameterized, pangu, opencc, mpmath, mecab-python3, jieba, ipadic, iniconfig, ijson, faiss-cpu, executing, docopt, distance, commonmark, braceexpand, backcall, appdirs, antlr4-python3-runtime, aniso8601, alabaster, zipp, wrapt, widgetsnbextension, urllib3, typing-extensions, typed-ast, traitlets, tqdm, tornado, tomli, toml, threadpoolctl, textdistance, termcolor, tensorboard-data-server, tabulate, sympy, sphinxcontrib-serializinghtml, sphinxcontrib-qthelp, sphinxcontrib-jsmath, sphinxcontrib-htmlhelp, sphinxcontrib-devhelp, sphinxcontrib-applehelp, soupsieve, smmap, six, shortuuid, shellingham, setuptools, setproctitle, ruamel.yaml.clib, rsa, regex, rapidfuzz, pyzmq, pyyaml, pytest-runner, PySocks, pypinyin, pyparsing, Pygments, pyDeprecate, pycparser, pybind11, pyasn1-modules, psutil, protobuf, prompt-toolkit, portalocker, pluggy, platformdirs, pip-api, pillow, pexpect, pathspec, parso, packaging, oauthlib, nvidia-cuda-nvrtc-cu11, numpy, nest-asyncio, multidict, MarkupSafe, lxml, loguru, llvmlite, kiwisolver, jupyterlab-widgets, joblib, jmespath, itsdangerous, isort, imagesize, idna, grpcio, ftfy, fsspec, frozenlist, fonttools, filelock, exceptiongroup, entrypoints, einops, editdistance, docutils, decorator, debugpy, Cython, cycler, colorama, click, charset-normalizer, certifi, cachetools, babel, audioread, attrs, async-timeout, absl-py, youtokentome, yarl, Werkzeug, webdataset, typer, sox, sentry-sdk, scipy, sacremoses, sacrebleu, ruamel.yaml, rich, requests, python-dateutil, pytest, pydantic, promise, onnx, omegaconf, nvidia-cuda-runtime-cu11, nvidia-cublas-cu11, nltk, matplotlib-inline, marshmallow, levenshtein, latexcodec, kaldiio, kaldi-python-io, jupyter-core, Jinja2, jedi, importlib-resources, importlib-metadata, h5py, google-auth, gitdb, fasttext, docker-pycreds, contourpy, comm, cffi, black, beautifulsoup4, attrdict, asttokens, aiosignal, yarg, texterrors, stack-data, sphinx, soundfile, scikit-learn, requests-oauthlib, pystoi, pybtex, pyannote.core, pooch, pandas, nvidia-cudnn-cu11, numba, matplotlib, markdown, jupyter-client, jiwer, inflect, hydra-core, huggingface-hub, GitPython, Flask, botocore, aiohttp, wandb, transformers, torch, seaborn, s3transfer, resampy, pybtex-docutils, pyannote.database, pipreqs, ipython, google-auth-oauthlib, gdown, g2p-en, flask-restful, torchvision, torchmetrics, tensorboard, sphinxcontrib-bibtex, pyannote.metrics, nemo_toolkit, librosa, ipykernel, boto3, sentence-transformers, pytorch-lightning, ipywidgets
+#7 398.4   Running setup.py install for pesq: started
+#7 398.8   Running setup.py install for pesq: finished with status 'error'
+#7 398.8   error: subprocess-exited-with-error
+#7 398.8   
+#7 398.8   × Running setup.py install for pesq did not run successfully.
+#7 398.8   │ exit code: 1
+#7 398.8   ╰─> [25 lines of output]
+#7 398.8       running install
+#7 398.8       running build
+#7 398.8       running build_py
+#7 398.8       creating build
+#7 398.8       creating build/lib.linux-x86_64-3.8
+#7 398.8       creating build/lib.linux-x86_64-3.8/pesq
+#7 398.8       copying pesq/_pesq.py -> build/lib.linux-x86_64-3.8/pesq
+#7 398.8       copying pesq/__init__.py -> build/lib.linux-x86_64-3.8/pesq
+#7 398.8       copying pesq/cypesq.pyx -> build/lib.linux-x86_64-3.8/pesq
+#7 398.8       copying pesq/pesq.h -> build/lib.linux-x86_64-3.8/pesq
+#7 398.8       copying pesq/pesqio.h -> build/lib.linux-x86_64-3.8/pesq
+#7 398.8       copying pesq/pesqmain.h -> build/lib.linux-x86_64-3.8/pesq
+#7 398.8       copying pesq/pesqpar.h -> build/lib.linux-x86_64-3.8/pesq
+#7 398.8       copying pesq/dsp.h -> build/lib.linux-x86_64-3.8/pesq
+#7 398.8       copying pesq/dsp.c -> build/lib.linux-x86_64-3.8/pesq
+#7 398.8       copying pesq/pesqdsp.c -> build/lib.linux-x86_64-3.8/pesq
+#7 398.8       copying pesq/pesqmod.c -> build/lib.linux-x86_64-3.8/pesq
+#7 398.8       running build_ext
+#7 398.8       skipping 'pesq/cypesq.c' Cython extension (up-to-date)
+#7 398.8       building 'cypesq' extension
+#7 398.8       creating build/temp.linux-x86_64-3.8
+#7 398.8       creating build/temp.linux-x86_64-3.8/pesq
+#7 398.8       gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -Ipesq -I/tmp/pip-install-bvhzj6pa/pesq_01ff600194fa42ccaf8a1484e15955e2/.eggs/numpy-1.24.0-py3.8-linux-x86_64.egg/numpy/core/include -I/tmp/pip-install-bvhzj6pa/pesq_01ff600194fa42ccaf8a1484e15955e2/.eggs/numpy-1.24.0-py3.8-linux-x86_64.egg/numpy/core/include -I/usr/local/include/python3.8 -c pesq/cypesq.c -o build/temp.linux-x86_64-3.8/pesq/cypesq.o
+#7 398.8       unable to execute 'gcc': No such file or directory
+#7 398.8       error: command 'gcc' failed with exit status 1
+#7 398.8       [end of output]
+#7 398.8   
+#7 398.8   note: This error originates from a subprocess, and is likely not a problem with pip.
+#7 398.8 error: legacy-install-failure
+#7 398.8 
+#7 398.8 × Encountered error while trying to install package.
+#7 398.8 ╰─> pesq
+#7 398.8 
+#7 398.8 note: This is an issue with the package mentioned above, not pip.
+#7 398.8 hint: See above for output from the failure.
+#7 398.8 WARNING: You are using pip version 22.0.4; however, version 22.3.1 is available.
+#7 398.8 You should consider upgrading via the '/usr/local/bin/python -m pip install --upgrade pip' command.
+------
