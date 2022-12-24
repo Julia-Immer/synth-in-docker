@@ -12,8 +12,9 @@ RUN pip install -r /tmp/requirements.txt
 # change to non-root user before running app
 RUN useradd -m myuser
 USER myuser
+COPY synthesizer-app.py /home/myuser/synthesizer-app.py
 WORKDIR /home/myuser
-# ENTRYPOINT ["synthesizer-app.py"]
-
+# currently cannot find file
+# ENTRYPOINT ["synthesizer-app.py"] # need to make accessible to my user
 
 CMD ["python3"]
