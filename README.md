@@ -1,7 +1,7 @@
 # python-docker-practice
 A very simple practice Dockerfile which starts the python interpreter.
 
-Soon to become, something else?  The nemo library seems buggy so may or may not make this a TTS engine.
+Soon to become, something else? 
 
 ## Build And Run This App
 

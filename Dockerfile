@@ -13,7 +13,7 @@ RUN pip install -r /tmp/requirements.txt
 RUN useradd -m myuser
 USER myuser
 WORKDIR /home/myuser
-# ENTRYPOINT ["synthesizer.py"]
+# ENTRYPOINT ["synthesizer-app.py"]
 
 
 CMD ["python3"]
