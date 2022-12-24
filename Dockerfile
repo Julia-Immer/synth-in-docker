@@ -17,4 +17,4 @@ WORKDIR /myuser
 # currently cannot find file
 # ENTRYPOINT ["/myuser/synthesizer-app.py"] # need to make accessible to my user
 
-CMD ["ls -a"]
+CMD ["python3"]
