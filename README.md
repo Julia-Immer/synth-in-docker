@@ -6,8 +6,8 @@ Soon to become, a musical synthesizer app, developed Dockerfile-first to use con
 ## Build And Run This App
 
 cd into this folder.
-`docker build -t synthesizer-in-docker .`
-`docker run -it -t synthesizer-in-docker`
+`docker build -t synth-in-docker .`
+`docker run -it -t synth-in-docker`
 
 To exit hit ctrl+D
     
