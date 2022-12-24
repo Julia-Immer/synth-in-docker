@@ -1,4 +1,4 @@
-# A Project For Practicing Docker and Build Tools
+# A Project For Practicing Docker and CI/CD Tools
 A very simple practice Dockerfile which starts the python interpreter.
 
 Soon to become, a musical synthesizer app, developed Dockerfile-first to use containerization and build tools.
