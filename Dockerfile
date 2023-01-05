@@ -5,18 +5,14 @@ FROM python:${PYTHON_VERSION}
 
 WORKDIR /app
 
-ENV TMP=/tmp \
-    REQ_PATH=requirements.txt \
-    APP_PATH=synthesizer-app.py
-
-# Before surrendering root privleges, cp requirements 
-# make it world readable by putting it in temp
-COPY ${REQ_PATH} ${TMP}
-COPY --chmod=0755 ${APP_PATH} /app/
+# Before surrendering root privleges, cp requirements and app
+# make requirements world readable 
+COPY --chmod=0755 ./requirements.txt ./
+COPY ./synthesizer-app.py ./
 
 # install requirements
 # create user for app
-RUN pip install -r ${TMP}/${REQ_PATH} && \
+RUN pip install -r requirements.txt && \
     useradd myuser
 
 # change to non-root user before running app
