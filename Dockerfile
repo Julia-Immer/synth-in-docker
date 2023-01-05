@@ -16,10 +16,8 @@ COPY --chmod=0755 ${APP_PATH} /app/
 
 # install requirements
 # create user for app
-# try to make app file world-readable so myuser can use it
 RUN pip install -r ${TMP}/${REQ_PATH} && \
     useradd myuser
-    # chmod +rx ./${APP_PATH}
 
 # change to non-root user before running app
 USER myuser
