@@ -8,7 +8,8 @@ WORKDIR /app
 # Before surrendering root privleges, cp requirements and app
 # make requirements world readable 
 COPY --chmod=0755 ./requirements.txt ./
-COPY ./synthesizer-app.py ./
+COPY --chmod=0755 ./__main__.py ./
+COPY --chmod=0755 ./synth.py ./
 
 # install requirements
 # create user for app
@@ -18,4 +19,4 @@ RUN pip install -r requirements.txt && \
 # change to non-root user before running app
 USER myuser
 
-CMD ["python3", "synthesizer-app.py"]
+CMD ["python3", "__main__.py"]
